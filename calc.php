@@ -4,13 +4,7 @@ session_start();
 if (!isset($_SESSION["user"])) {
     echo('<meta http-equiv="refresh" content="2; URL=login.php">');
 }
-
-
-
 ?>
-
-
-
 <html>
         <head>
  
@@ -34,7 +28,13 @@ if (!isset($_SESSION["user"])) {
                 function plus() {
                  var x = document.getElementById("x").value;
                   var y =  document.getElementById("y").value; 
-                  var z = parseInt(x) + parseInt(y);
+                  //var z = parseInt(x) + parseInt(y);
+                    var url = "api/plus.php?x=" + x +"&y=" + y;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET",url,false);
+                    xhr.send();
+                    var z = xhr.responseText;
+
                   document.getElementById ("z").value = z;
                   document.getElementById ("btn1").className = "pressed";
                   document.getElementById ("btn2").className = "";
