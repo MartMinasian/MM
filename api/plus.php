@@ -22,5 +22,6 @@ $sql = "INSERT INTO calc(Number1,Number2,Result,UserID) VALUES(11,22,33,'anonym'
 mysqli_query($conn,$sql);
 //echo (mysqli_error($conn));
 mysqli_close($conn);
+
 echo($z);
 
