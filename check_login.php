@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    include ("\\Users\\martun\\AppParams\\params.php");
+    include ("\Users\martun\AppParams\params.php");
    
 ?>
 html>
