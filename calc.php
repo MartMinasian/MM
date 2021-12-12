@@ -31,7 +31,7 @@ if (!isset($_SESSION["user"])) {
                   //var z = parseInt(x) + parseInt(y);
                     var url = "api/plus.php?x=" + x +"&y=" + y;
                     var xhr = new XMLHttpRequest();
-                    xhr.open("GET",url,false);
+                    xhr.open("GET", url, false);
                     xhr.send();
                     var z = xhr.responseText;
 

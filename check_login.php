@@ -1,8 +1,9 @@
 <?php
     session_start();
-    include ("\Users\martun\AppParams\params.php");
+   
+    include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
 ?>
-<html>
+    <html>
     <head>
         <title></title>
     </head>
