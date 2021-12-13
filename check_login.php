@@ -1,9 +1,10 @@
 <?php
     session_start();
    
-    include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
+    include(getenv("MYAPP_CONFIG"));
+    //include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
 ?>
-    <html>
+   <html>
     <head>
         <title></title>
     </head>
