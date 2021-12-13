@@ -12,9 +12,10 @@ $user = $_SESSION["user"];
 // 3. Секрет в коде
 
 //$conn = mysqli_connect("localhost","root","","calc");
-// 4. Код уязвимый для Sql-injection
+// 4. Код уязвимый для Sql-injectio
 
-include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
+include(getenv("MYAPP_CONFIG"));
+//include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
 //у меня мак и ссылки на диск С нет. 
 
 $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
