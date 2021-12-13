@@ -10,13 +10,10 @@ $user = $_SESSION["user"];
 // 1. Принцип наименьших привелегий
 // 2. Слабый пароль 
 // 3. Секрет в коде
-
 //$conn = mysqli_connect("localhost","root","","calc");
 // 4. Код уязвимый для Sql-injection
 
 include (getenv("MYAPP_CONFIG"));
-//у меня мак и ссылки на диск С нет. Ошибка в написании команды!
-
 $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
 $sql = "INSERT INTO log(NUMBER1,NUMBER2,Result,UserID) VALUES($x,$y,$z,'$user')";
 //$sql = "INSERT INTO calc(Number1,Number2,Result,UserID) VALUES(11,22,33,'anonym')";
