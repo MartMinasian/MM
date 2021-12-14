@@ -35,7 +35,7 @@
             mysqli_close($conn);
 
             //var_dump($result);
-            json_encode($result);
-            echo json_encode($result);
+            //json_encode($result);
+            echo (json_encode($result));
      
     
