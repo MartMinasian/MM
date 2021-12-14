@@ -3,6 +3,7 @@ session_start();
 
 if (!isset($_SESSION["user"])) {
     echo('<meta http-equiv="refresh" content="2; URL=login.php">');
+    die("Требуется логин!");
 }
 ?>
 <html>
