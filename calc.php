@@ -50,6 +50,7 @@ if (!isset($_SESSION["user"])) {
             </script>
 
             <body>
+                <a href="billing.php"></a>	
                 <h1>Калькулятор
                 </h1>
                 <input id="x" /> <br />

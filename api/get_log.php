@@ -7,15 +7,13 @@
     die("Требуется логин!");
    } 
    $user = $_SESSION["user"];
+
+  // echo($user);
     include(getenv("MYAPP_CONFIG"));
+
     //include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
-?>
-   <html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <?php
+
+
            //Оставим уязвимость sql-injection для спортивных управжнений
             $sql = "SELECT ID, NUMBER1, Number2,Result, UserID
                     FROM log 
@@ -37,7 +35,7 @@
             mysqli_close($conn);
 
             //var_dump($result);
+            json_encode($result);
             echo json_encode($result);
-        ?>
-    </body>
-</html>
+     
+    
