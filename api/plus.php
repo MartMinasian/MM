@@ -16,7 +16,7 @@ $user = $_SESSION["user"];
 
 include (getenv("MYAPP_CONFIG"));
 $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
-$sql = "INSERT INTO log(NUMBER1,NUMBER2,Result,UserID) VALUES($x,$y,$z,'$user')";
+$sql = "INSERT INTO log(NUMBER1,NUMBER2,Result,UserID,Timestamp VALUES($x,$y,$z,'$user',now)";
 //$sql = "INSERT INTO calc(Number1,Number2,Result,UserID) VALUES(11,22,33,'anonym')";
 mysqli_query($conn,$sql);
 echo (mysqli_error($conn));
