@@ -14,7 +14,8 @@ $user = $_SESSION["user"];
 //$conn = mysqli_connect("localhost","root","","calc");
 // 4. Код уязвимый для Sql-injection
 
-include (getenv("MYAPP_CONFIG"));
+//include (getenv("MYAPP_CONFIG"));
+include ('/var/www/html/params.php');
 $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
 $sql = "INSERT INTO log(NUMBER1,NUMBER2,Result,UserID,Timestamp VALUES($x,$y,$z,'$user',now)";
 //$sql = "INSERT INTO calc(Number1,Number2,Result,UserID) VALUES(11,22,33,'anonym')";
