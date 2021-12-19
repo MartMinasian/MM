@@ -19,14 +19,14 @@
             ";
 
             $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
-            echo $sql;
+            //echo $sql;
             //Нудная, но необходимая процедура передачи параметов 
             //в sql выражение, что гарантирует защиту от инжекции sql
 
             $statement = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($statement,"ss",$user,$hash);
             mysqli_stmt_execute($statement);
-            echo 2 ;
+            //echo 2 ;
             echo(mysqli_error($conn));
             $cursor = mysqli_stmt_get_result($statement);
             $result = mysqli_fetch_all($cursor);
