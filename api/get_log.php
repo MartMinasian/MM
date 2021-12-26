@@ -9,8 +9,8 @@
    $user = $_SESSION["user"];
 
   // echo($user);
-    include(getenv("MYAPP_CONFIG"));
-//include ('/var/www/html/params.php');
+    //include(getenv("MYAPP_CONFIG"));
+    include ('/var/www/html/params.php');
     //include("/Applications/XAMPP/xamppfiles/htdocs/MM/AppParams/params.php");
 
 
