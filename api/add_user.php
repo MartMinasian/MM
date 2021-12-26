@@ -10,7 +10,8 @@
             $user = $_REQUEST["user"];
             $pwd = $_REQUEST["pwd"];
             $hash = hash('sha256',$pwd);
-            $conn = mysqli_connect("localhost","root","","calc");
+            //$conn = mysqli_connect("localhost","root","","calc");
+            $conn = mysqli_connect("yand.dydns.org:33306","calc","blaCalc60@yand","calc");
             $sql = "INSERT INTO users (UserName,PwdHash) VALUES('$user', '$hash')";
           echo $sql;
 
